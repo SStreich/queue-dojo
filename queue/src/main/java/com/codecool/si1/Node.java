@@ -1,30 +1,37 @@
 package com.codecool.si1;
 
- class Node<E> {
-    private Node<E> nextNode;
-    private E data;
+public class Node {
+    private String value;
+    private Node nextNode;
+    private Integer priority;
 
-    Node(E data) {
-        this.data = data;
+    public Node(String value){
+        this.value = value;
+        this.priority = 0;
     }
 
-     void setData(E data) {
-        this.data = data;
+    public Node(String value, Integer priority) {
+        this.value = value;
+        this.priority = priority;
     }
 
-     Node<E> getNextNode() {
-        return nextNode;
+    public String getValue(){
+        return this.value;
     }
 
-     boolean hasNext() {
-        return nextNode != null;
+    public Node getNextNode(){
+        return this.nextNode;
     }
 
-     void setNextNode(Node<E> nextNode) {
-        this.nextNode = nextNode;
+    public void setNextNode(Node node) {
+        this.nextNode = node;
     }
 
-     E getData() {
-    return this.data;
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
     }
 }
